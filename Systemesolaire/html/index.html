@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>النظام الشمسي</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>النظام الشمسي</h1>
+        <p>اكتشف كواكب النظام الشمسي والمعلومات حول كل كوكب</p>
+    </header>
+
+    <nav>
+        <ul class="nav-list">
+           
+            <li><a href="#" onclick="loadPage('sun.html')">الشمس</a></li>
+            <li><a href="#" onclick="loadPage('earth.html')">الارض</a></li>
+            <li><a href="#" onclick="loadPage('mars.html')">المريخ</a></li>
+            <li><a href="#" onclick="loadPage('Mercure.html')">عطارد</a></li>
+            <li><a href="#" onclick="loadPage('fleur.html')">الزهرة</a></li>
+            <li><a href="#" onclick="loadPage('saturne.html')">زحل</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="content">
+            <article>
+                <h2>مرحبًا بك في النظام الشمسي!</h2>
+                <p>استخدم القائمة للتنقل واستكشاف المعلومات حول الشمس، الكواكب، والقمر.</p>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        function loadPage(page) {
+            fetch(page)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('content').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading page:', error));
+        }
+    </script>
+
+    
+    <nav>
+        <a href="formulaire.html" >اذهب إلى صفحة استطلاع الرأي</a>
+    </nav>
+
+
+
+
+
+
+</body>
+</html>
